@@ -1,0 +1,124 @@
+body{
+    text-align: center;
+    background-color: #1b4332;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    background-color: gray;
+    box-shadow: 0 0 18px cyan;
+    border-radius: 20px;
+    width: 45%;
+    text-align: center;
+    min-height: 80vh; 
+    font-size: 18px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.3s;
+}
+.container:hover {
+    box-shadow: 0 0 50px cyan;
+}
+.container button {
+    font-size: 18px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.container button:hover {
+    box-shadow: 0 0 20px black;
+    transform: scale(1.01);
+}
+
+.container p {
+    margin-top: 60px;
+}
+#countdown {
+    font-size: 200px;
+    color: black;
+}
+
+#increase {
+    padding: 40px;
+    margin-top: 50px;
+    background-color: blue;
+    border: none;
+    border-radius: 20px;
+}
+#decrease {
+    padding: 40px;
+    margin-top: 50px;
+    border: none;
+    border-radius: 20px;
+    background-color: blue;
+}
+#reset{
+    padding: 40px;
+    margin-top: 50px;
+    border: none;
+    border-radius: 20px;
+    background-color: red;
+    
+}
+
+@media (max-width: 768px){
+   .buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .container{
+        width: 70%;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    #countdown {
+        font-size: 150px;
+    }
+
+    #increase,
+    #decrease,
+    #reset{
+        width: auto;
+        box-shadow: 0 0 30px cyan;
+    }
+}
+
+@media (max-width: 480px){
+    .buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .container{
+        width: 95%;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    #countdown {
+        font-size: 150px;
+    }
+
+    #increase,
+    #decrease,
+    #reset{
+        width: 30%;
+        font-size: 18px;
+        padding: 15px;
+        box-shadow: 0 0 30px cyan;
+    }
+
+}
