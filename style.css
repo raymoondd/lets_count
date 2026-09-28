@@ -52,6 +52,7 @@ body{
     background-color: blue;
     border: none;
     border-radius: 20px;
+    font-size: 20px;
 }
 #decrease {
     padding: 40px;
@@ -59,6 +60,7 @@ body{
     border: none;
     border-radius: 20px;
     background-color: blue;
+    font-size: 20px;
 }
 #reset{
     padding: 40px;
@@ -66,7 +68,7 @@ body{
     border: none;
     border-radius: 20px;
     background-color: red;
-    
+    font-size: 20px;
 }
 
 @media (max-width: 768px){
