@@ -1,129 +1,177 @@
-body{
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 20px;
     text-align: center;
     background-color: #1b4332;
     color: white;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    display: flex;
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
-.container{
+
+.container {
     background-color: gray;
     box-shadow: 0 0 18px cyan;
     border-radius: 20px;
-    width: 45%;
+    width: 90%;
+    max-width: 650px;
+    min-height: 80vh;
+    padding: 30px;
     text-align: center;
-    min-height: 80vh; 
     font-size: 18px;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     transition: 0.3s;
-    margin-top: 30px;
-    padding: 20px;
 }
+
 .container:hover {
     box-shadow: 0 0 50px cyan;
 }
+
 .container button {
     font-size: 18px;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .container button:hover {
     box-shadow: 0 0 20px black;
-    transform: scale(1.01);
+    transform: scale(1.02);
 }
 
 .container p {
-    margin-top: 60px;
+    margin-top: 40px;
 }
+
 #countdown {
-    font-size: 200px;
+    font-size: clamp(70px, 15vw, 200px);
     color: black;
+    margin: 20px 0;
+    word-break: break-word;
 }
 
-#increase {
-    padding: 40px;
-    margin-top: 50px;
-    background-color: blue;
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+#increase,
+#decrease,
+#reset {
+    min-width: 130px;
+    padding: 25px 30px;
     border: none;
     border-radius: 20px;
     font-size: 20px;
 }
+
+#increase,
 #decrease {
-    padding: 40px;
-    margin-top: 50px;
-    border: none;
-    border-radius: 20px;
     background-color: blue;
-    font-size: 20px;
 }
-#reset{
-    padding: 40px;
-    margin-top: 50px;
-    border: none;
-    border-radius: 20px;
+
+#reset {
     background-color: red;
-    font-size: 20px;
 }
 
-@media (max-width: 768px){
-   .buttons{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
-    .container{
-        width: 70%;
-        min-height: auto;
-        padding: 20px;
+/* Tablet */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+        font-size: 18px;
     }
 
-    #countdown {
-        font-size: 150px;
-    }
-
-    #increase,
-    #decrease,
-    #reset{
-        width: auto;
-        box-shadow: 0 0 30px cyan;
-    }
-}
-
-@media (max-width: 480px){
-    .buttons{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
-    .container{
+    .container {
         width: 95%;
         min-height: auto;
-        padding: 20px;
-        justtify-content: center;
+        padding: 25px 20px;
     }
 
     #countdown {
-        font-size: 150px;
+        font-size: clamp(70px, 18vw, 150px);
+    }
+
+    .buttons {
+        gap: 12px;
     }
 
     #increase,
     #decrease,
-    #reset{
-        width: 30%;
+    #reset {
+        min-width: 120px;
+        padding: 20px;
         font-size: 18px;
-        padding: 15px;
-        box-shadow: 0 0 30px cyan;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+        font-size: 16px;
     }
 
+    .container {
+        width: 100%;
+        padding: 20px 15px;
+        border-radius: 15px;
+    }
+
+    .container p {
+        margin-top: 25px;
+    }
+
+    #countdown {
+        font-size: clamp(60px, 22vw, 110px);
+        margin: 15px 0;
+    }
+
+    .buttons {
+        width: 100%;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    #increase,
+    #decrease,
+    #reset {
+        flex: 1;
+        min-width: 90px;
+        padding: 15px 10px;
+        font-size: 16px;
+        border-radius: 15px;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+    .container {
+        padding: 15px 10px;
+    }
+
+    #countdown {
+        font-size: 60px;
+    }
+
+    #increase,
+    #decrease,
+    #reset {
+        font-size: 14px;
+        padding: 12px 8px;
+    }
 }
